@@ -1,4 +1,4 @@
-### Data analysis for tetrad pollen count
+### Data analysis for pollen tetrad counts over time
 
 ## Load dataset
 
@@ -123,7 +123,7 @@ apply( data1 , 2 , function(x) sum ( x == 0 ) )
 zero_count <- colSums(data1==0)/nrow(data1)*100
 zero_count
 
-#Comments: Many zeroes, use zero-inflation models
+# Comments: Many zeroes, use zero-inflation models
 
 ## Collinearity check 
 # Comments: Irrelevant because there is only 1 explanatory variable;
