@@ -210,13 +210,17 @@ data_to_keep <- data1
 
 ggplot(aes(y = viable_seeds_per_silique, x = treatment, fill = accession), 
        data = data_to_keep) +
-  geom_boxplot(outlier.shape = NA) +
-  geom_point(pch = 21, position = position_jitterdodge(), data = data_to_keep) +
+  geom_boxplot(outlier.shape = NA, position=position_dodge(width = 1)) +
+  geom_jitter(pch = 21, alpha = 0.7, position = position_jitterdodge(jitter.width = 1, 
+                                                                    dodge.width = 1, 
+                                                                    jitter.height = 0), 
+             size = 1.5, 
+             data = data_to_keep) +
   #geom_jitter(aes(y = viable_seeds_per_silique, x = treatment, fill = accession, position = "dodge"), data = data_to_keep) + 
-  geom_jitter(aes(y = viable_seeds_per_silique, x = treatment),
+  geom_point(aes(y = viable_seeds_per_silique, x = treatment), position = position_jitterdodge(jitter.width = 0.2),
               data = data_to_remove, col = "red") +
   xlab("Treatment") + 
-  ylab("Viable seeds per silique")
+  ylab("Number of seeds per silique")
 
 
 ## Check for zero-inflation in Y
@@ -407,7 +411,7 @@ plot1 <- ggplot() + geom_point(data = data1_Col0, aes(x = treatment,
   geom_point(data = pred.data_Col0, aes(x = treatment, y = pred), 
              shape = 18, color = "red", size = 4) + 
   theme(panel.spacing.x = unit(1, "cm"), axis.text.x=element_text(angle = 90, hjust = 0)) +
-  facet_wrap(~plant_ID, ncol = 3) + xlab("Treatment") + ylab("Viable seeds per silique")
+  facet_wrap(~plant_ID, ncol = 3) + xlab("Treatment") + ylab("Number of seeds per silique")
 
 tiff("msh4_combined_Col-0_visualize_GLMM.tiff", units="in", width=15, height=10, res=300)
 plot1
