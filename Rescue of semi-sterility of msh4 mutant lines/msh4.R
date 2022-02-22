@@ -4,7 +4,7 @@
 ### with TRV-RECQ4, TRV-FIGL1 and TRV-GUS.
 
 ## Load data
-setwd("./msh4")
+setwd("./Rescue of semi-sterility of msh4 mutant lines")
 data1 <- read.csv('msh4.csv')
 
 # Filter data to retain only observations with "viable seeds" and "msh4 mutants"
