@@ -3,7 +3,7 @@
 ## Load dataset
 
 # Read dataset for QRT
-setwd("./QRT")
+setwd("./QRT Tetrad Counts")
 data1 <- read.csv("QRT_specific.csv")
 
 # Comments: Y_var is normalized tetrad counts. 
