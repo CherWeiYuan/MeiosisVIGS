@@ -2,7 +2,7 @@
 ### plants treated with TRV-FIGL1, TRV-RECQ4 and TRV-GUS
 
 ## Load data
-setwd("./msh4_controls")
+setwd("./Odds of obtaining viable seeds after different TRV treatments")
 data1 <- read.csv('Col-0_controls.csv')
 data1$odds <- data1$viable_seeds_per_silique/data1$aborted_seeds_per_silique
 
