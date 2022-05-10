@@ -1,4 +1,5 @@
-# Statistics for "Virus-induced gene silencing allows the knock-down of gene expression throughout meiosis and pollen formation in Arabidopsis thaliana."
+# Statistics for "Knock-down of gene expression throughout meiosis and pollen formation by virus-induced gene silencing in Arabidopsis thaliana"
+Paper is published in the Plant Journal at https://doi.org/10.1111/tpj.15733
 
 # Contents
 The paper consists of three main datasets. According to the subtitles in Methods:
